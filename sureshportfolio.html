@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="sureshportfolio.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Hello, I Am Suresh</h1>
+        <p>A Developer who loves to create</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+    </header>
+    
+    <section class="projects" id="projects">
+        <h2>My Work</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <img src="C:\Users\suresh\Pictures\Screenshots\Screenshot (62).png" alt="Weather App">
+                <h3>WeatherApp</h3>
+                <a href="https://weatherapp-ten-liard.vercel.app/">App Link</a>
+            </div>
+            <div class="project-card fade-in">
+                <img src="C:\Users\suresh\Pictures\Screenshots\Screenshot (63).png" alt="Quiz App">
+                <h3>QuizApp</h3>
+                <a href="https://testing-js-8typ.vercel.app/">App Link</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <h3><a href="mailto:suresh1317@gmail.com">suresh1317@gmail.com</a><br>6379225860</h3>
+    </footer>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.fade-in');
+        const windowHeight = window.innerHeight;
+
+        elements.forEach(function(element) {
+            const positionFromTop = element.getBoundingClientRect().top;
+
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('show');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
